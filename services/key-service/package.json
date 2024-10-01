@@ -1,0 +1,32 @@
+{
+  "name": "@monorepo/key-service",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "description": "",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --minify --splitting"
+  },
+  "keywords": ["bun"],
+  "license": "MIT",
+  "homepage": "https://github.com/ivanoliverfabra/bun-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanoliverfabra/bun-starter.git"
+  },
+  "bugs": "https://github.com/ivanoliverfabra/bun-starter/issues",
+  "author": "Ivan Oliver <ivan@fabra.me>",
+  "dependencies": {
+    "@monorepo/common": "workspace:*",
+    "@monorepo/types": "workspace:*",
+    "@prisma/client": "^5.20.0",
+    "hono": "^4.6.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "@types/bun": "latest",
+    "prisma": "^5.20.0",
+    "typescript": "^5.5.4"
+  }
+}

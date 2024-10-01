@@ -1,0 +1,24 @@
+{
+  "name": "@monorepo",
+  "private": true,
+  "scripts": {
+    "clean": "rm -f bun.lockb",
+    "start:website": "cd apps/website && bun run start",
+    "start:key-service": "cd services/key-service && bun run start",
+    "start": "concurrently -k -n website,key-service -c green,blue \"bun start:website\" \"bun start:key-service\"",
+    "dev:website": "cd apps/website && bun run dev",
+    "dev:key-service": "cd services/key-service && bun run dev",
+    "dev": "concurrently -k -n website,key-service -c green,blue \"bun dev:website\" \"bun dev:key-service\"",
+    "build:website": "cd apps/website && bun run build",
+    "build:key-service": "cd services/key-service && bun run build",
+    "build": "concurrently -k -n website,key-service -c green,blue \"bun build:website\" \"bun build:key-service\""
+  },
+  "workspaces": [
+    "services/*",
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@monorepo/client",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react.tsx"
+  },
+  "dependencies": {
+    "@monorepo/common": "workspace:*",
+    "@monorepo/types": "workspace:*",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "@types/bun": "latest",
+    "@types/react": "^18.3.10",
+    "typescript": "^5.5.4"
+  }
+}
